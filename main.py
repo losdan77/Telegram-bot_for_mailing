@@ -32,7 +32,7 @@ async def start_mailing():  # Функция рассылки
 
 
 async def scheduler():
-    aioschedule.every().day.at('20:55').do(start_mailing)
+    aioschedule.every().day.at('10:00').do(start_mailing)
     while True:
         await aioschedule.run_pending()
         await asyncio.sleep(1)
@@ -52,7 +52,7 @@ async def start(mes):
 @dp.message_handler(commands='mailing')
 async def mailing(mes):
     user_id = mes.from_user.id
-    if user_id == 335679271:  # Тут id того, кому можно выполнять команду рассылки
+    if user_id == 111111111:  # Тут id того, кому можно выполнять команду рассылки
         await start_mailing()
 
 
