@@ -164,7 +164,7 @@ async def start(mes):
 @dp.message_handler(commands='mailing')
 async def mailing(mes):
     user_id = mes.from_user.id
-    if user_id == 335679271:  # Тут id того, кому можно выполнять команду рассылки
+    if user_id == 111111111:  # Тут id того, кому можно выполнять команду рассылки
         await start_mailing()
 
 
